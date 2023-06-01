@@ -36,7 +36,7 @@ Ck       = 8.3E-3
 
 """
 Data bewerken
-Voor het bewerken van de data wordt een excel tabel uitgelezen waarbij het script
+Voor het bewerken van de data wordt een (geannominiseerde in dit voorbeeld) excel tabel uitgelezen waarbij het script
 rekening houdt met lege cellen in de matrix. Er mogen dus korrelgroottemetingen
 ontbreken.
 Vervolgens wordt voor elke regel in de tabel de verschillende D10 waarden berekend en
