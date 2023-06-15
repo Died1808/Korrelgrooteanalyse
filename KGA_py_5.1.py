@@ -14,7 +14,7 @@ pd.options.display.float_format = '{:,.2f}'.format
 
 out=pd.DataFrame(columns = [['nr','naam', 'x', 'y', 'diepte m NAP', 'D5','D10','D15','D17','D20','D25',
  'D30','D35','D40','D45','D50','D55','D60','D65','D70','D75','D80','D85','D90',
- 'D95','D100', 'k_Haazen','k_Sauerbrei','k_Pavchich','k_Seelheim','k_CarKoz','k_Alysen','k_Bedinger',
+ 'D95','D100', 'k_Hazen','k_Sauerbrei','k_Pavchich','k_Seelheim','k_CarKoz','k_Alysen','k_Bedinger',
  'k_Terzaghi','k_Harleman','k_DenRooij','k_Beyer','Cu','Io', 'k_mediaan','k_mean']])
 
 
@@ -108,9 +108,9 @@ for k in range(1,lenmat,1):
     als uiteindelijke waarde
     """
     if (3 > df.iloc[1,1] > 0.1) and df.iloc[12,1] <5:
-        Haazen = 1000 * df.iloc[1,1]**2 
+        Hazen = 1000 * df.iloc[1,1]**2 
     else:
-        Haazen=np.nan
+        Hazen=np.nan
     
     if (df.iloc[9,1] < 0.5):
         Sauerbrei = g/Kinvis*(0.00375*((Por**3)/(1-Por)**2)*(df.iloc[3,1]**2)*Corfact)
@@ -156,7 +156,7 @@ for k in range(1,lenmat,1):
     K_waarde = [round(Sauerbrei,1), round(Pavchich,1), round(Seelheim,1),
                 round(AlySen,1), round(CarKoz,1), round(Bedinger,1), round(Terzaghi,1), round(Harleman,1)]
 
-    out.loc[k] = [k, naam, x, y, mid, *Dxwaarde, round(Haazen,1), round(Sauerbrei,1),
+    out.loc[k] = [k, naam, x, y, mid, *Dxwaarde, round(Hazen,1), round(Sauerbrei,1),
            round(Pavchich,1), round(Seelheim,1), round(CarKoz,1),
            round(AlySen,1), round(Bedinger,1), round(Terzaghi,1), round(Harleman,1),
            round(DenRooij,1), round(Beyer,1), round(Cu,1), round(Io,1),
