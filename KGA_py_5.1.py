@@ -20,7 +20,7 @@ out=pd.DataFrame(columns = [['nr','naam', 'x', 'y', 'diepte m NAP', 'D5','D10','
 
 """
 Vaste waarden
-Hieronder staan een aantal door de verschillende doorlatendheidsberkeningen
+Hieronder staan een aantal door de verschillende doorlatendheidsberekeningen
 gehanteerde constantes
 
 """
@@ -36,7 +36,7 @@ Ck       = 8.3E-3
 
 """
 Data bewerken
-Voor het bewerken van de data wordt een (geannominiseerde in dit voorbeeld) excel tabel uitgelezen waarbij het script
+Voor het bewerken van de data wordt een (geanominiseerde in dit voorbeeld) excel tabel uitgelezen waarbij het script
 rekening houdt met lege cellen in de matrix. Er mogen dus korrelgroottemetingen
 ontbreken.
 Vervolgens wordt voor elke regel in de tabel de verschillende D10 waarden berekend en
@@ -103,7 +103,7 @@ for k in range(1,lenmat,1):
     
     """
     K-waarden uit diverse formules. 
-    Hieronder worden aan de hand van litteratuurgegevens de doorlatendheden bepaald.
+    Hieronder worden aan de hand van literatuurgegevens de doorlatendheden bepaald.
     Omdat hier soms een forse spreiding in aanwezig is wordt naast de mean ook de mediaan gehanteerd
     als uiteindelijke waarde
     """
